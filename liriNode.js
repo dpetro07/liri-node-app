@@ -24,8 +24,9 @@ function getMovie() {
     request('http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&r=json', function (error, response, body){
         if (!error && response.statusCode == 200) {
           var movieData = "Title: " + JSON.parse(body)["Title"] + "\r\n" +
-                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
                                         "Year: " + JSON.parse(body)["Year"] + "\r\n" +
+                                        "About: " + JSON.parse(body)["Plot"] + "\r\n" +
+                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
                                         "Genre: " + JSON.parse(body)["Genre"];
 
           console.log(movieData);
@@ -36,8 +37,9 @@ function getMovie() {
     request('http://www.omdbapi.com/?t=' + params[1] + '&y=&plot=short&r=json', function (error, response, body){
         if (!error && response.statusCode == 200) {
           var movieData = "Title: " + JSON.parse(body)["Title"] + "\r\n" +
-                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
                                         "Year: " + JSON.parse(body)["Year"] + "\r\n" +
+                                        "About: " + JSON.parse(body)["Plot"] + "\r\n" +
+                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
                                         "Genre: " + JSON.parse(body)["Genre"];
           console.log(movieData);
           return;
