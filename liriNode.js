@@ -3,34 +3,71 @@
 // var fs = require("fs");
 // var twitterKeysJs = ("./keys.js");
 // var twitter = require('twitter');
-// var request = require('request');
-// var params = process.argv.slice(2);
+var request = require('request');
+var params = process.argv.slice(2);
 // var spotify = require("spotify");
 
 
 
-// switch(params[0]){
-//   case "movie-this":
-//   case
-//     getMovie();
-//     break;
+switch(params[0]){
+  case "movie-this":
+    getMovie();
+    break;
 
-//   default:
-//     console.log("err");
+  default:
+    console.log("err");
 
-// }
+}
 
+function getMovie() {
+  if (params[1] === undefined) {
+    request('http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&r=json', function (error, response, body){
+        if (!error && response.statusCode == 200) {
+          var movieData = "Title: " + JSON.parse(body)["Title"] + "\r\n" +
+                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
+                                        "Year: " + JSON.parse(body)["Year"] + "\r\n" +
+                                        "Genre: " + JSON.parse(body)["Genre"];
 
-
-var request = require('request');
-request('http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&r=json', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    
-    console.log(JSON.parse(body)["Title"]); // Show the HTML for the Google homepage. 
+          console.log(movieData);
+          return;
+        }      
+    })
+  } else {
+    request('http://www.omdbapi.com/?t=' + params[1] + '&y=&plot=short&r=json', function (error, response, body){
+        if (!error && response.statusCode == 200) {
+          var movieData = "Title: " + JSON.parse(body)["Title"] + "\r\n" +
+                                        "IMDB Rating: " + JSON.parse(body)["imdbRating"] + "\r\n" +
+                                        "Year: " + JSON.parse(body)["Year"] + "\r\n" +
+                                        "Genre: " + JSON.parse(body)["Genre"];
+          console.log(movieData);
+          return;
+        }      
+    })          
+    console.log("error when selecting a movie");
   }
-})
+}
 
 
+
+
+
+// function movieThis() {
+//     if (params[1] === undefined)
+//       request('http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&r=json', function (error, response, body) {
+//         if (!error && response.statusCode == 200) {
+//           console.log(JSON.parse(body)["Title"]); // Show the HTML for the Google homepage. 
+//           console.log(JSON.parse(body)["imdbRating"]);
+//           console.log(JSON.parse(body)["Year"]);
+//           console.log(JSON.parse(body)["Genre"]);
+//           return;
+//         }
+
+//           console.log(JSON.parse(body)["Title"]); // Show the HTML for the Google homepage. 
+//           console.log(JSON.parse(body)["imdbRating"]);
+//           console.log(JSON.parse(body)["Year"]);
+//           console.log(JSON.parse(body)["Genre"]);
+//       })
+// }
 
 
 // function myTweets() {
