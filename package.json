@@ -1,0 +1,25 @@
+{
+  "name": "lirr",
+  "version": "1.0.0",
+  "description": "s",
+  "main": "keys.js",
+  "dependencies": {
+    "request": "^2.67.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpetro07/liri-node-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpetro07/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/dpetro07/liri-node-app#readme"
+}
