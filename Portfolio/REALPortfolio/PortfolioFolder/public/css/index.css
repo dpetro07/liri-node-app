@@ -1,0 +1,134 @@
+/* Navbar */
+.nav-wrapper {
+  background-color: white;
+}
+.nav-wrapper:hover {
+  background-color: black;
+}
+
+
+.navbarLinks {
+  color: black;
+/*  font-family: 'Satisfy', cursive;*/
+  font-family: "League Spartan";
+  letter-spacing: 2px;
+}
+/*.navbarLinks:hover {
+  background-color: black;
+  color: white;
+}*/
+
+.dp7Logo {
+  height: 75px;
+  width: 90px;
+}
+
+/*--------------------------------------------*/
+
+/* Parralex customization */
+.parallax-container {
+  height: 400px;
+}
+/*--------------------------------------------*/
+
+/*--------------------------------------------*/
+/*NAME SECTION*/
+.name {
+  font-family: norwester;
+  font-weight: bold;
+}
+
+.frontEnd {
+  font-family: Kollektif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.who {
+  font-family: Montserrat;
+}
+
+/*--------------------------------------------*/
+
+
+
+
+
+/* Headers */
+.headers {
+  font-family: norwester;
+}
+
+
+
+
+
+/* Education Section */
+.education {
+  background-color: #515B5E;
+}
+
+.colleges {
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  height: 400px; 
+  width: 400px;
+}
+.collegeName {
+/*  font-family: "Yanone Tagesschrift";*/
+  font-family: norwester;
+  font-size: 200%;
+  text-align: center;
+
+}
+.title {
+/*  font-family: norwester;*/
+    font-family: "Yanone Tagesschrift";
+}
+
+.degree {
+   font-family: Montserrat;
+}
+
+.wvuBtn {
+  background-color: #EFB31D;
+}
+.wvuBtn:hover {
+  background-color: #00457C;
+}
+
+.ruBtn {
+  background-color: #EB3C48;
+}
+.ruBtn:hover {
+  background-color: black;
+}
+
+/*Parallex 2*/
+.parallax-container {
+  background-color: #E2E3DF;
+}
+
+
+/*Projects Section*/
+.projects {
+  border-style: solid;
+  border-color: black;
+  height: 400px;
+  width: 400px;
+
+}
+
+
+.extraProjectsBtn {
+  background-color: black;
+}
+.extraProjectsBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
